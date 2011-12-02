@@ -150,7 +150,7 @@ Fx.Scroll = new Class({
 
 		['x', 'y'].each(function(axis){
 			if (axes.contains(axis)){
-				to[axis] = position[axis] - (containerSize[axis] - size[axis]) / 2;
+				to[axis] = scroll[axis] + position[axis] - (containerSize[axis] - size[axis]) / 2;
 			}
 			if (to[axis] == null) to[axis] = scroll[axis];
 			if (offset && offset[axis]) to[axis] = to[axis] + offset[axis];
